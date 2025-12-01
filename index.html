@@ -11,53 +11,53 @@
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
 </head>
 <body class="dark">
 
   <!-- Header -->
-    <header id="header">
-      <nav class="container"> 
-        <a href="#" class="logo">Anantha<span>.dev</span></a>
-        <div class="menu-toggle">
-          <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="theme-toggle">
-            <button id="theme-toggle-btn">
-              <i class="fas fa-moon"></i>
-              <span class="sr-only">Toggle theme</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  <!-- Hero Section -->
+  <header id="header">
+    <nav class="container"> 
+      <a href="#home" class="logo">Anantha<span>.dev</span></a>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="theme-toggle">
+          <button id="theme-toggle-btn">
+            <i class="fas fa-moon"></i>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  <section id="home" class="hero-section">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-text animate-fade-in">
-          <p class="subtitle">Hello, I'm</p>
-          <h1>Anantha Padmanabhan M</h1>
-          <h2>Software Developer</h2>
-          <p class="description">
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text animate-fade-in">
+            <p class="subtitle">Hello, I'm</p>
+            <h1>Anantha Padmanabhan M</h1>
+            <h2>Software Developer</h2>
+            <p class="description">
               Motivated and passionate MCA Graduate with expertise in Python and web development. 
               I build robust, user-friendly applications with a focus on clean, efficient code.
-          </p>
+            </p>
 
-          <div class="hero-buttons">
+            <div class="hero-buttons">
               <a href="#contact" class="btn btn-primary">Contact Me</a>
               <a href="#projects" class="btn btn-secondary">View My Work</a>
-          </div>
+            </div>
 
-          <div class="social-links">
+            <div class="social-links">
               <a href="https://www.linkedin.com/in/anantha-padmanabhan-m-806a1825a?utm_source" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
               </a>
@@ -67,19 +67,19 @@
               <a href="mailto:ananthapadmanabhan96@gmail.com" aria-label="Email">
                 <i class="fas fa-envelope"></i>
               </a>
+            </div>
           </div>
-        </div>
-        <div class="hero-image animate-fade-in">
+          <div class="hero-image animate-fade-in">
             <div class="profile-image">
               <img src="assets/pass1.jpg" alt="Anantha Padmanabhan">
             </div>
           </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-   <!-- About Me Section -->
-    <section id="about" class="about-section">
+    <!-- About Me Section -->
+    <section id="about" class="about-section reveal">
       <div class="container">
         <h2 class="section-heading"><span>&lt;</span> About Me <span>/&gt;</span></h2>
         <div class="about-content">
@@ -125,7 +125,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <section id="skills" class="skills-section reveal">
       <div class="container">
         <h2 class="section-heading"><span>&lt;</span> Skills <span>/&gt;</span></h2>
         <div class="skills-grid">
@@ -233,7 +233,7 @@
           </div>
         </div>
 
-         <!-- Soft Skills -->
+        <!-- Soft Skills -->
         <div class="soft-skills-card">
           <div class="skill-header">
             <i class="fas fa-users"></i>
@@ -291,7 +291,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section reveal">
       <div class="container">
         <h2 class="section-heading"><span>&lt;</span> Projects <span>/&gt;</span></h2>
         <div class="projects-grid">
@@ -308,8 +308,9 @@
         </div>
       </div>
     </section>
+
     <!-- Resume Section -->
-    <section id="resume" class="resume-section">
+    <section id="resume" class="resume-section reveal">
       <div class="container">
         <h2 class="section-heading"><span>&lt;</span> Resume <span>/&gt;</span></h2>
         <div class="resume-content">
@@ -335,8 +336,9 @@
         </div>
       </div>
     </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section reveal">
       <div class="container">
         <h2 class="section-heading"><span>&lt;</span> Contact Me <span>/&gt;</span></h2>
         <div class="contact-content">
@@ -421,7 +423,8 @@
       </div>
     </section>
   </main>
-    <!-- Footer -->
+
+  <!-- Footer -->
   <footer id="footer">
     <div class="container">
       <div class="footer-content">
