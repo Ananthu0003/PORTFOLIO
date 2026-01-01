@@ -11,8 +11,8 @@ const projects = [
     techStack: ["Python", "Django", "3D Modeling", "Machine Learning"],
     image:
       "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&w=800&h=450",
-    demoLink: "#",
-    githubLink: "#",
+    demoLink: "https://virtual-3d-home-builder-1.onrender.com",
+    githubLink: "https://github.com/Ananthu0003/Virtual-3D-home-Builder.git",
   },
   {
     id: "parking-system",
