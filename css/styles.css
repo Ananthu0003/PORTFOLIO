@@ -340,6 +340,7 @@ HERO SECTION
 ==============================
 */
 .hero-section {
+  position: relative; /* Added for absolute positioning of canvas */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -351,7 +352,20 @@ HERO SECTION
   background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
 }
 
+/* Hero Canvas */
+#hero-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero-content {
+  position: relative; /* Ensure content is above canvas */
+  z-index: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -386,6 +400,34 @@ HERO SECTION
   font-size: 1.75rem;
   color: var(--muted-foreground);
   margin-bottom: 1.5rem;
+}
+
+/* Typing Effect */
+.typing-text {
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: var(--primary);
+  width: 3px;
+  height: 1.75rem;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+.typed-text {
+  color: var(--secondary);
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  49% { opacity: 1; }
+  50% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .description {
@@ -1344,4 +1386,104 @@ RESPONSIVE DESIGN
   .section-heading {
     font-size: 1.5rem;
   }
+}
+
+/*
+==============================
+SCROLL REVEAL ANIMATION
+==============================
+*/
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*
+==============================
+DECORATIVE SHAPES
+==============================
+*/
+.shape {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 10s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--primary);
+  top: -100px;
+  left: -100px;
+  opacity: 0.15;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  background: var(--secondary);
+  bottom: 50px;
+  right: -50px;
+  opacity: 0.15;
+  animation-delay: 2s;
+}
+
+.shape-3 {
+  width: 250px;
+  height: 250px;
+  background: var(--primary);
+  top: 50%;
+  left: -100px;
+  opacity: 0.1;
+  animation-duration: 15s;
+}
+
+.shape-4 {
+  width: 150px;
+  height: 150px;
+  background: var(--secondary);
+  top: 20%;
+  right: 10%;
+  opacity: 0.1;
+  animation-delay: 5s;
+}
+
+/* Ensure relative positioning for sections containing shapes */
+.about-section, .skills-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section .container, .skills-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/*
+==============================
+ENHANCED INTERACTIVITY
+==============================
+*/
+.skill-card:hover .skill-header i {
+  transform: rotate(360deg);
+  transition: transform 0.6s ease;
+}
+
+.soft-skill-item:hover i {
+  transform: scale(1.2) rotate(10deg);
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover i, .footer-social a:hover i {
+  display: inline-block;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
 }
