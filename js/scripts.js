@@ -45,6 +45,27 @@ document.addEventListener("DOMContentLoaded", () => {
     currentYearSpan.textContent = new Date().getFullYear();
   }
 
+const skillBars = document.querySelectorAll(".skill-progress");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bar = entry.target;
+      const width = bar.style.width;
+      bar.style.width = "0%";
+
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 200);
+
+      observer.unobserve(bar);
+    }
+  });
+}, { threshold: 0.4 });
+
+skillBars.forEach(bar => observer.observe(bar));
+
+  
   // ======================
   // Load Projects
   // ======================

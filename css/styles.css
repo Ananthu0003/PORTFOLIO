@@ -735,6 +735,75 @@ SKILLS SECTION
   margin-bottom: 0.5rem;
 }
 
+/* ==============================
+SKILL HOVER ZOOM + BAR GLOW
+============================== */
+
+.skill-list li {
+  transition: transform 0.25s ease, filter 0.25s ease;
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+
+/* Row zoom */
+.skill-list li:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Skill text highlight */
+.skill-name {
+  transition: color 0.25s ease;
+}
+
+.skill-list li:hover .skill-name {
+  color: var(--primary);
+}
+
+/* Bar base */
+.skill-bar {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bar fill animation */
+.skill-progress {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+  transform-origin: left;
+}
+
+/* Hover → bar grow + glow */
+.skill-list li:hover .skill-progress {
+  transform: scaleY(1.6);
+  box-shadow: 0 0 14px rgba(167,139,250,0.8);
+  filter: brightness(1.2);
+}
+
+.skill-progress::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.skill-list li:hover .skill-progress::after {
+  left: 130%;
+}
+
+
 /* 
 ==============================
 PROJECTS SECTION
